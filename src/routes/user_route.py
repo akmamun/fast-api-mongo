@@ -4,11 +4,6 @@ from fastapi import APIRouter
 router = APIRouter()
 
 
-@router.get("/")
-async def index():
-    return {"Hello": "World"}
-
-
-@router.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@router.get("/user/{user_id}")
+def read_item(user_id: int, q: Optional[str] = None):
+    return {"user_id": user_id, "q": q}
