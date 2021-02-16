@@ -1,19 +1,16 @@
-from typing import Optional
-
 from fastapi import FastAPI
+from .routes import todo_route, user_route
 
 app = FastAPI()
 
 
+app.include_router(todo_route.router)
+app.include_router(user_route.router)
+
+
 @app.get("/")
-async def index():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
-
+async def root():
+    return {"message": "Hello Bigger Applications!"}
 
 if __name__ == "main":
     app.run()
