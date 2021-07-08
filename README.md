@@ -1,5 +1,2 @@
-## Fast API
-- Lets Run
-```sh
-uvicorn src.server:app --reload
-```
+# Recommendation Service
+- Run  `uvicorn src.servers.start:app --reload`
