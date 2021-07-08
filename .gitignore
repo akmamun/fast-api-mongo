@@ -15,5 +15,4 @@
 .env.test.local
 .env.production.local
 
-src/ml_models/*
 *.egg-info
