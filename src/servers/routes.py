@@ -1,6 +1,6 @@
 from fastapi.routing import APIRoute
 
-from src.servers.controllers.todo_controller import ProductController
+from src.servers.controllers.todo_controller import TodoController
 
 
 def index():
