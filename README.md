@@ -8,4 +8,6 @@ pip install -r requirements.txt
 ### Run docker compose
 - Make sure [docker](https://docs.docker.com/engine/install) and [docker-compose](https://docs.docker.com/compose/install/) installed
 
-- Lets Run  `uvicorn src.servers.start:app --reload`
+### Lets Run
+- Docker run `sudo docker-compose up -d --build`
+- Locally run  `uvicorn src.servers.start:app --reload`
