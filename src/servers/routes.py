@@ -9,5 +9,5 @@ def index():
 TodoController = TodoController()
 routes = [
     APIRoute('/', index, methods=["GET"]),
-    APIRoute('/todo', TodoController.get_todos, methods=["GET"])
+    APIRoute('/todos', TodoController.save_todo, methods=["POST"])
 ]

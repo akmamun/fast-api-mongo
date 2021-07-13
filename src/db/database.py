@@ -1,5 +1,4 @@
 from datetime import datetime
-
 from bson import ObjectId
 from motor.motor_asyncio import AsyncIOMotorClient
 
@@ -15,8 +14,8 @@ class Database:
         self.db = self.client[cfg["db"]["name"]]
 
     async def _insert(self, element, collection_name):
-        element["created_at"] = datetime.now()
-        element["updated_at"] = datetime.now()
+        # element["created_at"] = datetime.now()
+        # element["updated_at"] = datetime.now()
         # insert data to db
         res = await self.db[collection_name].insert_one(element)
         success = bool(res.acknowledged)
