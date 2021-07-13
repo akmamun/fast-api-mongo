@@ -1,4 +1,4 @@
-from src.db.database import Database
+from src.db.Database import Database
 
 
 class Repository:
@@ -6,13 +6,13 @@ class Repository:
         self.db = Database()
 
     async def save(self, data, collection_name):
-        return self.db._insert(data, collection_name)
+        return await self.db._insert(data, collection_name)
 
     async def find(self, criteria, collection_name, projection=None, limit=0, sort=None, cursor=False):
-        return self.db._find(criteria, collection_name, projection=None, limit=0, sort=None, cursor=False)
+        return await self.db._find(criteria, collection_name, projection=None, limit=0, sort=None, cursor=False)
 
     async def find_by_id(self, id, collection_name):
-        return self.db._find_by_id(id, collection_name)
+        return await self.db._find_by_id(id, collection_name)
 
     async def update(self, id, data, collection_name):
-        return self.db._update(id, data, collection_name)
+        return await self.db._update(id, data, collection_name)
