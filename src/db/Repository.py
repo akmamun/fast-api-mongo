@@ -1,4 +1,4 @@
-from src.db.database import Database
+from src.db.Database import Database
 
 
 class Repository:

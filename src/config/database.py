@@ -1,9 +1,14 @@
+from dotenv import load_dotenv
+from src.helpers.env import env
+
+load_dotenv()
+
 def db() -> dict:
     return {
         "db": {
-            "url": "mongodb://localhost:27017/",
-            "name": "database_name",
-            "user": "",
-            "password": ""
+            "url": env("MONGO_URL", "mongodb://localhost:27017/"),
+            "name":  env("DATABASE_NAME", "database_name"),
+            "user": env("USERNAME_NAME", ""),
+            "password": env("PASSWORD", "")
         }
     }

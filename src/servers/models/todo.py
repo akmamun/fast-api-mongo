@@ -1,7 +1,7 @@
 
 from pydantic import BaseModel, Field, validator
 
-from src.db.repository import Repository
+from src.db.Repository import Repository
 
 
 class Todos(Repository):
