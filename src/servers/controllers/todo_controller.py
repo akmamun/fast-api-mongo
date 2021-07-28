@@ -13,8 +13,11 @@ class TodoController:
         await self.todos.saveTodo(**request_data)
 
         return JSONResponse(
-            status_code=200,
+            status_code=201,
             content={"data": None,
-                     "code": status.HTTP_200_OK,
+                     "code": status.HTTP_201_CREATED,
                      "message": "successfully save"},
         )
+
+    async def get_todos(self, title: str = None):
+        return await self.todos.getAll(title)

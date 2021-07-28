@@ -1,6 +1,5 @@
 /ENV/
 *__pycache__
-.env
 
 # testing
 /coverage
@@ -14,6 +13,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env
 *.egg-info
 .vscode/
