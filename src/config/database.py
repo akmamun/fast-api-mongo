@@ -8,7 +8,7 @@ def db() -> dict:
         "db": {
             "url": env("MONGO_URL", "mongodb://localhost:27017/"),
             "name":  env("DATABASE_NAME", "database_name"),
-            "user": env("USERNAME_NAME", ""),
+            "user": env("USERNAME", ""),
             "password": env("PASSWORD", "")
         }
     }
