@@ -6,7 +6,7 @@ from src.db.Repository import Repository
 
 class Todos(Repository):
     # async def index(self, add):
-    #     await add([('', "")])
+    #     await add([('_id')])
 
     def collection(self):
         return 'todos'

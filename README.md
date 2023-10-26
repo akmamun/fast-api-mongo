@@ -1,13 +1,28 @@
-## FastAPI MicroService with Docker, Nginx and MongoDB(Motor)
+## FastAPI Micro Service with Docker, Nginx, and Asynchronous MongoDB (Motor)
 
-### Create [virtual environment](https://docs.python.org/3/library/venv.html) and install requirements 
-```sh
-pip install -r requirements.txt
-```
+###  Installation Instructions
 
-### Run docker compose
-- Make sure [docker](https://docs.docker.com/engine/install) and [docker-compose](https://docs.docker.com/compose/install/) installed
+- Create a [virtual environment](https://docs.python.org/3/library/venv.html)
+- Install the python Dependencies with `pip install -r requirements.txt`
+- Copy the .env.example file as .env
+    ```sh
+    cp .env.example .env
+    ```
+- Ensure that you fill in all the valid environment properties in the .env file.
 
-### Lets Run
-- Docker run `sudo docker-compose up -d --build`
-- Locally run  `uvicorn src.servers.start:app --reload`
+
+### Run Locally
+To run the service locally, use the following command:
+    ```sh
+    uvicorn server:app --reload
+    ```
+
+### Run with Docker
+To run the service using Docker, use the following command:
+    ```sh
+    sudo docker-compose up -d --build   
+    ```
+
+### Run Docker Compose for Production Build
+Ensure that you have [Docker]((https://docs.docker.com/engine/install)) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
+
