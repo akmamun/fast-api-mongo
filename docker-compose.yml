@@ -17,7 +17,7 @@ services:
         container_name: service
         build: .
         restart: always
-        command: gunicorn -w 4 -k uvicorn.workers.UvicornWorker src.servers.start:app  --bind 0.0.0.0:8000
+        command: gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app  --bind 0.0.0.0:8000
         expose:
          - 8000
         # env_file:
